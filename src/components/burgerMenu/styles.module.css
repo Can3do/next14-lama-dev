@@ -1,0 +1,25 @@
+.button {
+    background: transparent;
+    border-radius: 1rem;
+    --button-color: #fff;
+    overflow: hidden;
+}
+
+.button .hamburger {
+    transition: translate .4s, rotate .4s;
+}
+
+.button[aria-expanded="true"] .hamburger {
+    translate: 2px -2px;
+    rotate: 0.125turn;
+}
+
+.button .line {
+    transition: .4s;
+    stroke-dasharray: 60 31 60 300;
+}
+
+.button[aria-expanded="true"] .line {
+    stroke-dasharray: 60 105 60 300;
+    stroke-dashoffset: -90;
+}
